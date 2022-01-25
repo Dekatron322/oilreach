@@ -1,0 +1,215 @@
+{% extends "main/newbase.html" %}
+{% load static %}
+{% block content %}
+
+<style type="text/css">
+    
+    .alert{
+        box-shadow: 5px 5px 10px #111;
+        border: none;
+    }
+    @keyframes show-toast {
+    0%   {bottom: -100%;}
+    20%  {bottom: 50px;}
+    80%  {bottom: 50px;}
+    100% {bottom: -10%;}
+}
+
+.notification.is-toast {
+    position: fixed;
+    bottom: 100%;
+    right: 20px;
+    animation-name: show-toast;
+    animation-duration: 6s;
+}
+@media(max-width: 450px) {
+    h3{
+      font-size: 15px !important;
+    }
+  }
+</style>
+
+{% if messages %}
+    {% for message in messages %}
+        <div class="notification is-toast alert alert-{{message.tags}} text-center" role="alert" style="background-color: #1DB954; color: #fff; border-radius: 6px; font-weight: 600; z-index: 1;">
+            {{ message }}
+        </div>
+    {% endfor %}
+{% endif %}
+        <!--page-header-->
+        <div class="page-header has-image">
+            <div class="page-header-content">
+                <div class="featured-image"></div>
+                <div class="container">
+                    <h1>Contact</h1>
+                    <nav class="breadcrumbs">
+                        <a class="home" href="#"><span>Home</span></a>
+                        <i class="fa fa-angle-right" aria-hidden="true"></i>
+                        <span>Contact</span>
+                    </nav>
+                </div>
+            </div>
+        </div>
+        <!--page-header  end-->
+
+        <!-- team-->
+        <div class="contactpage pagepadd">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-4 col-md-12">
+                        <div class="mf-contact-box clearfix ">
+                            <div class="mf-section-title text-left dark medium-size ">
+                                <h2>Headquater</h2>
+                            </div>
+                            <div class="contact-info address"><i class="flaticon-arrow"></i>
+                                <div><span>Address:</span> 1B, Babtunde Kuboye street, Lekki Phase 1, Lagos Nigeria</div>
+                            </div>
+                            <div class="contact-info phone"><i class="fa fa-phone"></i>
+                                <div><span>Call Us:</span> +(234) 807 753 9237 &amp; +44 7412 506021</div>
+                            </div>
+                            <div class="contact-info email"><i class="flaticon-note"></i>
+                                <div><span>Mail Us:</span> <a href="mailto:info@oilreach.com">info@oilreach.com</a></div>
+                            </div>
+                            <ul class="contact-social">
+                                <li class="facebook">
+                                    <a href="#" target="_blank">
+                                        <i class="fa fa-facebook"></i>
+                                    </a>
+                                </li>
+                                <li class="twitter">
+                                    <a href="#" target="_blank">
+                                        <i class="fa fa-twitter"></i>
+                                    </a>
+                                </li>
+                                <li class="googleplus">
+                                    <a href="#" target="_blank">
+                                        <i class="fa fa-whatsapp"></i>
+                                    </a>
+                                </li>
+                                
+                                <li class="linkedin">
+                                    <a href="#" target="_blank">
+                                        <i class="fa fa-linkedin"></i>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-12">
+                        <div class="mf-department">
+                            <div class="mf-section-title text-left dark medium-size">
+                                <h2>Contacts</h2>
+                            </div>
+                            <div class="department-list single-slide">
+                                <div class="department-group">
+                                    <div class="department-info ">
+                                        <div class="department-avatar"><img class="" src="{% static 'main/images/resources/click-to-call-icon-REV.jpg' %}" width="67" height="64" alt="testi5" title="testi5" /></div>
+                                        <div class="info">
+                                            <span class="phone"><i class="fa fa-phone"></i>+2347016647696</span>
+                                            <div class="mail"><i class="fa fa-envelope"></i>technical@oilreach.com</div>
+                                        </div>
+                                    </div>
+                                    <div class="department-info ">
+                                        <div class="department-avatar"><img class="" src="{% static 'main/images/resources/click-to-call-icon-REV.jpg' %}" width="67" height="64" alt="test4" title="test4" /></div>
+                                        <div class="info">
+                                            <span class="phone"><i class="fa fa-phone"></i>+2348077539237</span>
+                                            <div class="mail"><i class="fa fa-envelope"></i>info@oilreach.com</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="department-group">
+                                    <div class="department-info ">
+                                        <div class="department-avatar"><img class="" src="{% static 'main/images/resources/click-to-call-icon-REV.jpg' %}" width="67" height="64" alt="testi5" title="testi5" /></div>
+                                        <div class="info">
+                                            <span class="phone"><i class="fa fa-phone"></i>+2347016647696</span>
+                                            <div class="mail"><i class="fa fa-envelope"></i>technical@oilreach.com</div>
+                                        </div>
+                                    </div>
+                                    <div class="department-info ">
+                                        <div class="department-avatar"><img class="" src="{% static 'main/images/resources/click-to-call-icon-REV.jpg' %}" width="67" height="64" alt="test4" title="test4" /></div>
+                                        <div class="info">
+                                            <span class="phone"><i class="fa fa-phone"></i>+2348077539237</span>
+                                            <div class="mail"><i class="fa fa-envelope"></i>info@oilreach.com</div>
+                                        </div>
+                                    </div>
+
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-12">
+                        <div class="mf-working-hour ">
+                            <div class="mf-section-title text-left dark medium-size ">
+                                <h2>Working Hours</h2>
+                            </div>
+                            <ul class="mf-list-hour">
+                                <li><span class="day">Monday</span><span class="hour">09:00am - 06:00pm</span></li>
+                                <li><span class="day">Tuesday</span><span class="hour">09:00am - 06:00pm</span></li>
+                                <li><span class="day">Wednesday</span><span class="hour">10:00am - 06:00pm</span></li>
+                                <li><span class="day">Thursday</span><span class="hour">09:00am - 06:00pm</span></li>
+                                <li><span class="day">Friday</span><span class="hour">09:00am - 06:00pm</span></li>
+                                <li><span class="day">Saturday</span><span class="hour">09:00am - 03:00pm</span></li>
+                                <li><span class="day">Sunday</span><span class="hour">Closed</span></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="contactform">
+            <div class="container">
+                <div class="mf-section-title text-center dark large-size margbtm20">
+                    <h2>Send Message Us</h2>
+                </div>
+                <div class="text-center margbtm40">Don’t hestiate to ask us something, Our customer support team always ready to help
+                    <br>you,they will support you 24/7.</div>
+                <div class="contact-form mf-contact-form-7 form-light">
+
+                    <form  action="" method="post" class="wpcf7-form" >
+                        {% csrf_token %}
+                        <div class="messages"></div>
+                        <div class="controls mf-form mf-form-2">
+                            <div class="row">
+                                <div class="col-md-6 col-xs-12 col-sm-12 mf-input-field">
+                                    <div class="form-group">
+                                        <input type="text" name="name" value="" size="40" placeholder="Your Name*" required>
+                                        <div class="help-block with-errors"></div>
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="email" name="email" value="" size="40" placeholder="Email Address*" required>
+                                        <div class="help-block with-errors"></div>
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="text" name="phone" value="" size="40" placeholder="Phone Number" required>
+                                        <div class="help-block with-errors"></div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 col-xs-12 col-sm-12 mf-textarea-field">
+                                    <div class="form-group">
+                                        <textarea name="message" cols="40" rows="10" placeholder="Enter Your Message..."></textarea>
+                                        <div class="help-block with-errors"></div>
+                                    </div>
+                                </div>
+                                <div class="text-center mf-submit col-md-12 col-xs-12 col-sm-12">
+                                    <div class="form-group">
+                                        <button type="submit" class="btn-style-two">SEND</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <!-- contact-->
+
+        <!--google map-->
+        <div class="google-map-area">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15858.722323724929!2d3.459035!3d6.435058!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x103bf500914e62f1%3A0x6f5d22d51b195e21!2s1b%20Babatunde%20Kuboye%20St%2C%20Lekki%20Phase%201%20106104%2C%20Lagos%2C%20Nigeria!5e0!3m2!1sen!2sus!4v1642604610983!5m2!1sen!2sus" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+        </div>
+        <!--google map end-->
+
+ {% endblock %}
